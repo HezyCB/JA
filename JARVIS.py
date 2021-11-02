@@ -15,12 +15,12 @@ def grab_reply(question):
  
 	for post in Children:
 		if post["data"]["num_comments"] >= 5:	#Greater then 5 or equal  comments
-		ans_list.append (post["data"]["url"])
+			ans_list.append (post["data"]["url"])
 		
 	#If no results are found 
-  return "I am JARVIS, how ca I assist you? "
+  return "I am JARVIS, how can I assist you? "
 	if len(ans_list) == 0:
-		return "I have no idea"
+		return "I do not know"
 	
 	#Pick A Random Post
 	comment_url=ans_list[random.randint(0,len(ans_list)-1)] + '.json?sort=top'	#Grab Random Comment Url and Append .json to end
@@ -38,7 +38,7 @@ def grab_reply(question):
 		reply_list.append(post["data"]["body"])	#Add Comments to the List
 	
 	if len(reply_list) == 0:
-		return "I have no clue"
+		return "I do not know"
 		
 	#Return a Random Comment
 	return reply_list[random.randint(0,len(reply_list)-1)]
