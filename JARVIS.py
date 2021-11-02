@@ -45,6 +45,6 @@ def grab_reply(question):
  
 #Main Loop, Always ask for a question
 while 1:
-	q=raw_input("I am JARVIS, how can I assist you? ")
+	q=input("I am JARVIS, how can I assist you? ")
 	q=q.replace(" ", "+")	#Replace Spaces with + for URL encoding
 	print(grab_reply(q))	#Grab and Print the Reply
