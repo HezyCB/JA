@@ -16,9 +16,7 @@ def grab_reply(question):
 	for post in Children:
 		if post["data"]["num_comments"] >= 5:	#Greater then 5 or equal  comments
 			ans_list.append (post["data"]["url"])
-		
-	#If no results are found 
-  		return "I am JARVIS, how can I assist you? "
+			return "I am JARVIS, how can I assist you? "
 	if len(ans_list) == 0:
 		return "I do not know"
 	
